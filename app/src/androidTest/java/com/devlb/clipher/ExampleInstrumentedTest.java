@@ -1,4 +1,4 @@
-package com.devlb.clog;
+package com.devlb.clipher;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
