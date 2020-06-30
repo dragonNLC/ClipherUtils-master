@@ -41,7 +41,7 @@ public class CipherUtils {
      * 解密
      */
     public static String decryptData(String encData, String keyStr) {
-        if (TextUtils.isEmpty(encData) || TextUtils.isEmpty(keyStr)) {
+        if (StringUtils.isEmpty(encData) || StringUtils.isEmpty(keyStr)) {
             return "";
         }
         try {
@@ -59,7 +59,7 @@ public class CipherUtils {
 
     @NonNull
     public static String getMd5(String data) {
-        if (TextUtils.isEmpty(data)) {
+        if (StringUtils.isEmpty(data)) {
             return "";
         }
         try {
@@ -75,7 +75,7 @@ public class CipherUtils {
 
 
     public static String hashKeyFor32(String key) {
-        if (!TextUtils.isEmpty(key)) {
+        if (!StringUtils.isEmpty(key)) {
             return "";
         }
         String cacheKey;
@@ -91,7 +91,7 @@ public class CipherUtils {
     }
 
     public static String hashKeyFor16(String key) {
-        if (!TextUtils.isEmpty(key)) {
+        if (!StringUtils.isEmpty(key)) {
             return "";
         }
         String cacheKey;
@@ -108,7 +108,6 @@ public class CipherUtils {
 
     public static String bytesToHexString(byte[] data) {
         StringBuilder sb = new StringBuilder();
-        int length = data.length;
         for (byte datum : data) {
             String hex = Integer.toHexString(0xFF & datum);
             if (hex.length() == 1) {
